@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Chart.h"
 
-@interface PieChart : UIView
+@interface PieChart : Chart
 
 @property (nonatomic, retain) NSArray *sliceArray;
 @property (nonatomic, retain) NSArray *colorsArray;

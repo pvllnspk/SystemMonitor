@@ -18,6 +18,16 @@ int const STEPS_NUMBER = 15;
 
 @implementation AreaChart
 
+
+-(id)initWithFrame:(CGRect)frame{
+    if([super initWithFrame:frame]){
+        
+         _sendTraffic = [NSMutableArray array];
+        _receivedTraffic = [NSMutableArray array];
+    }
+    return self;
+}
+
 - (void) drawLineChart:(CGRect)rect withContext: (CGContextRef) context withData:(NSMutableArray*) data withColor:(UIColor*) color {
     
     CGColorRef lineColor = [color CGColor];
@@ -103,17 +113,10 @@ int const STEPS_NUMBER = 15;
     }
 }
 
-
 - (void)drawRect:(CGRect)rect{
     
-    if(_sendTraffic==nil){
-        _sendTraffic = [NSMutableArray array];
-    }
-    if(_receivedTraffic==nil){
-        _receivedTraffic = [NSMutableArray array];
-    }
-    
     CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextClearRect(context, rect);
     
     if([_sendTraffic count] > 0){
         [self drawLineChart:rect withContext:context withData:_sendTraffic withColor:[UIColor colorWithRed:1.0 green:0.5 blue:0 alpha:1.0]];

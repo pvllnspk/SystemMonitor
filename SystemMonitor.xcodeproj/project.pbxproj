@@ -13,23 +13,24 @@
 		B39EA993196804E0009B3281 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B39EA991196804E0009B3281 /* InfoPlist.strings */; };
 		B39EA995196804E0009B3281 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B39EA994196804E0009B3281 /* main.m */; };
 		B39EA999196804E0009B3281 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B39EA998196804E0009B3281 /* AppDelegate.m */; };
-		B39EA99B196804E1009B3281 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B39EA99A196804E1009B3281 /* Default.png */; };
-		B39EA99D196804E1009B3281 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B39EA99C196804E1009B3281 /* Default@2x.png */; };
-		B39EA99F196804E1009B3281 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B39EA99E196804E1009B3281 /* Default-568h@2x.png */; };
 		B39EA9A2196804E1009B3281 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B39EA9A0196804E1009B3281 /* MainStoryboard.storyboard */; };
 		B39EA9C4196805CC009B3281 /* CorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B39EA9C2196805CC009B3281 /* CorViewController.m */; };
 		B39EA9CD19686818009B3281 /* NetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B39EA9CC19686818009B3281 /* NetViewController.m */; };
 		B3E38303196F06B200F94DE7 /* BackgroundGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E38302196F06B200F94DE7 /* BackgroundGridView.m */; };
 		B3E3830E196F0EA500F94DE7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E3830D196F0EA500F94DE7 /* QuartzCore.framework */; };
 		B3E38317196F20AC00F94DE7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E38316196F20AC00F94DE7 /* ViewController.m */; };
-		B3E3831B196F452D00F94DE7 /* bars.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E38318196F452D00F94DE7 /* bars.png */; };
-		B3E3831C196F452D00F94DE7 /* pie.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E38319196F452D00F94DE7 /* pie.png */; };
-		B3E3831D196F452D00F94DE7 /* stats.png in Resources */ = {isa = PBXBuildFile; fileRef = B3E3831A196F452D00F94DE7 /* stats.png */; };
-		B3E38326196F46EE00F94DE7 /* AreaChart.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E38320196F46EE00F94DE7 /* AreaChart.m */; };
-		B3E38327196F46EE00F94DE7 /* BarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E38322196F46EE00F94DE7 /* BarChart.m */; };
-		B3E38328196F46EE00F94DE7 /* PieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E38325196F46EE00F94DE7 /* PieChart.m */; };
 		B3E472D3196DCD5D00568576 /* System.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E472D2196DCD5D00568576 /* System.m */; };
 		B3E472D6196DDA7700568576 /* MemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E472D5196DDA7700568576 /* MemViewController.m */; };
+		B3EB68CD19706B7400587B1A /* Chart.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EB68CC19706B7400587B1A /* Chart.m */; };
+		B3EB68D719706B8300587B1A /* AreaChart.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EB68D019706B8300587B1A /* AreaChart.m */; };
+		B3EB68D819706B8300587B1A /* BarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EB68D319706B8300587B1A /* BarChart.m */; };
+		B3EB68D919706B8300587B1A /* PieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EB68D619706B8300587B1A /* PieChart.m */; };
+		B3EB68E119706CF500587B1A /* bars.png in Resources */ = {isa = PBXBuildFile; fileRef = B3EB68DB19706CF500587B1A /* bars.png */; };
+		B3EB68E219706CF500587B1A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3EB68DC19706CF500587B1A /* Default-568h@2x.png */; };
+		B3EB68E319706CF600587B1A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B3EB68DD19706CF500587B1A /* Default.png */; };
+		B3EB68E419706CF600587B1A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3EB68DE19706CF500587B1A /* Default@2x.png */; };
+		B3EB68E519706CF600587B1A /* pie.png in Resources */ = {isa = PBXBuildFile; fileRef = B3EB68DF19706CF500587B1A /* pie.png */; };
+		B3EB68E619706CF600587B1A /* stats.png in Resources */ = {isa = PBXBuildFile; fileRef = B3EB68E019706CF500587B1A /* stats.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,9 +44,6 @@
 		B39EA996196804E0009B3281 /* SystemMonitor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SystemMonitor-Prefix.pch"; sourceTree = "<group>"; };
 		B39EA997196804E0009B3281 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B39EA998196804E0009B3281 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B39EA99A196804E1009B3281 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		B39EA99C196804E1009B3281 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		B39EA99E196804E1009B3281 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B39EA9A1196804E1009B3281 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		B39EA9C1196805CC009B3281 /* CorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CorViewController.h; path = "View Controllers/CorViewController.h"; sourceTree = "<group>"; };
 		B39EA9C2196805CC009B3281 /* CorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CorViewController.m; path = "View Controllers/CorViewController.m"; sourceTree = "<group>"; };
@@ -57,20 +55,25 @@
 		B3E3830D196F0EA500F94DE7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B3E38315196F20AC00F94DE7 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = "View Controllers/ViewController.h"; sourceTree = "<group>"; };
 		B3E38316196F20AC00F94DE7 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = "View Controllers/ViewController.m"; sourceTree = "<group>"; };
-		B3E38318196F452D00F94DE7 /* bars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bars.png; sourceTree = "<group>"; };
-		B3E38319196F452D00F94DE7 /* pie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pie.png; sourceTree = "<group>"; };
-		B3E3831A196F452D00F94DE7 /* stats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stats.png; sourceTree = "<group>"; };
-		B3E3831F196F46EE00F94DE7 /* AreaChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaChart.h; sourceTree = "<group>"; };
-		B3E38320196F46EE00F94DE7 /* AreaChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaChart.m; sourceTree = "<group>"; };
-		B3E38321196F46EE00F94DE7 /* BarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarChart.h; sourceTree = "<group>"; };
-		B3E38322196F46EE00F94DE7 /* BarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarChart.m; sourceTree = "<group>"; };
-		B3E38324196F46EE00F94DE7 /* PieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChart.h; sourceTree = "<group>"; };
-		B3E38325196F46EE00F94DE7 /* PieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChart.m; sourceTree = "<group>"; };
 		B3E38329196F473D00F94DE7 /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
 		B3E472D1196DCD5C00568576 /* System.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = System.h; sourceTree = "<group>"; };
 		B3E472D2196DCD5D00568576 /* System.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = System.m; sourceTree = "<group>"; };
 		B3E472D4196DDA7700568576 /* MemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MemViewController.h; path = "View Controllers/MemViewController.h"; sourceTree = "<group>"; };
 		B3E472D5196DDA7700568576 /* MemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MemViewController.m; path = "View Controllers/MemViewController.m"; sourceTree = "<group>"; };
+		B3EB68CB19706B7400587B1A /* Chart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chart.h; sourceTree = "<group>"; };
+		B3EB68CC19706B7400587B1A /* Chart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chart.m; sourceTree = "<group>"; };
+		B3EB68CF19706B8300587B1A /* AreaChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaChart.h; sourceTree = "<group>"; };
+		B3EB68D019706B8300587B1A /* AreaChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaChart.m; sourceTree = "<group>"; };
+		B3EB68D219706B8300587B1A /* BarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarChart.h; sourceTree = "<group>"; };
+		B3EB68D319706B8300587B1A /* BarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarChart.m; sourceTree = "<group>"; };
+		B3EB68D519706B8300587B1A /* PieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChart.h; sourceTree = "<group>"; };
+		B3EB68D619706B8300587B1A /* PieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChart.m; sourceTree = "<group>"; };
+		B3EB68DB19706CF500587B1A /* bars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bars.png; sourceTree = "<group>"; };
+		B3EB68DC19706CF500587B1A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B3EB68DD19706CF500587B1A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		B3EB68DE19706CF500587B1A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		B3EB68DF19706CF500587B1A /* pie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pie.png; sourceTree = "<group>"; };
+		B3EB68E019706CF500587B1A /* stats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stats.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,16 +141,11 @@
 		B39EA98F196804E0009B3281 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B3E38318196F452D00F94DE7 /* bars.png */,
-				B3E38319196F452D00F94DE7 /* pie.png */,
-				B3E3831A196F452D00F94DE7 /* stats.png */,
+				B3EB68DA19706CF500587B1A /* Resources */,
 				B39EA990196804E0009B3281 /* SystemMonitor-Info.plist */,
 				B39EA991196804E0009B3281 /* InfoPlist.strings */,
 				B39EA994196804E0009B3281 /* main.m */,
 				B39EA996196804E0009B3281 /* SystemMonitor-Prefix.pch */,
-				B39EA99A196804E1009B3281 /* Default.png */,
-				B39EA99C196804E1009B3281 /* Default@2x.png */,
-				B39EA99E196804E1009B3281 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -170,14 +168,53 @@
 		B3E3831E196F46EE00F94DE7 /* Charts */ = {
 			isa = PBXGroup;
 			children = (
-				B3E3831F196F46EE00F94DE7 /* AreaChart.h */,
-				B3E38320196F46EE00F94DE7 /* AreaChart.m */,
-				B3E38321196F46EE00F94DE7 /* BarChart.h */,
-				B3E38322196F46EE00F94DE7 /* BarChart.m */,
-				B3E38324196F46EE00F94DE7 /* PieChart.h */,
-				B3E38325196F46EE00F94DE7 /* PieChart.m */,
+				B3EB68CB19706B7400587B1A /* Chart.h */,
+				B3EB68CC19706B7400587B1A /* Chart.m */,
+				B3EB68CE19706B8300587B1A /* AreaChart */,
+				B3EB68D119706B8300587B1A /* BarChart */,
+				B3EB68D419706B8300587B1A /* PieChart */,
 			);
 			path = Charts;
+			sourceTree = "<group>";
+		};
+		B3EB68CE19706B8300587B1A /* AreaChart */ = {
+			isa = PBXGroup;
+			children = (
+				B3EB68CF19706B8300587B1A /* AreaChart.h */,
+				B3EB68D019706B8300587B1A /* AreaChart.m */,
+			);
+			path = AreaChart;
+			sourceTree = "<group>";
+		};
+		B3EB68D119706B8300587B1A /* BarChart */ = {
+			isa = PBXGroup;
+			children = (
+				B3EB68D219706B8300587B1A /* BarChart.h */,
+				B3EB68D319706B8300587B1A /* BarChart.m */,
+			);
+			path = BarChart;
+			sourceTree = "<group>";
+		};
+		B3EB68D419706B8300587B1A /* PieChart */ = {
+			isa = PBXGroup;
+			children = (
+				B3EB68D519706B8300587B1A /* PieChart.h */,
+				B3EB68D619706B8300587B1A /* PieChart.m */,
+			);
+			path = PieChart;
+			sourceTree = "<group>";
+		};
+		B3EB68DA19706CF500587B1A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B3EB68DB19706CF500587B1A /* bars.png */,
+				B3EB68DC19706CF500587B1A /* Default-568h@2x.png */,
+				B3EB68DD19706CF500587B1A /* Default.png */,
+				B3EB68DE19706CF500587B1A /* Default@2x.png */,
+				B3EB68DF19706CF500587B1A /* pie.png */,
+				B3EB68E019706CF500587B1A /* stats.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,13 +269,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B39EA993196804E0009B3281 /* InfoPlist.strings in Resources */,
-				B39EA99B196804E1009B3281 /* Default.png in Resources */,
-				B39EA99D196804E1009B3281 /* Default@2x.png in Resources */,
-				B39EA99F196804E1009B3281 /* Default-568h@2x.png in Resources */,
 				B39EA9A2196804E1009B3281 /* MainStoryboard.storyboard in Resources */,
-				B3E3831B196F452D00F94DE7 /* bars.png in Resources */,
-				B3E3831C196F452D00F94DE7 /* pie.png in Resources */,
-				B3E3831D196F452D00F94DE7 /* stats.png in Resources */,
+				B3EB68E119706CF500587B1A /* bars.png in Resources */,
+				B3EB68E219706CF500587B1A /* Default-568h@2x.png in Resources */,
+				B3EB68E319706CF600587B1A /* Default.png in Resources */,
+				B3EB68E419706CF600587B1A /* Default@2x.png in Resources */,
+				B3EB68E519706CF600587B1A /* pie.png in Resources */,
+				B3EB68E619706CF600587B1A /* stats.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,9 +294,10 @@
 				B3E472D6196DDA7700568576 /* MemViewController.m in Sources */,
 				B3E38303196F06B200F94DE7 /* BackgroundGridView.m in Sources */,
 				B3E38317196F20AC00F94DE7 /* ViewController.m in Sources */,
-				B3E38326196F46EE00F94DE7 /* AreaChart.m in Sources */,
-				B3E38327196F46EE00F94DE7 /* BarChart.m in Sources */,
-				B3E38328196F46EE00F94DE7 /* PieChart.m in Sources */,
+				B3EB68CD19706B7400587B1A /* Chart.m in Sources */,
+				B3EB68D719706B8300587B1A /* AreaChart.m in Sources */,
+				B3EB68D819706B8300587B1A /* BarChart.m in Sources */,
+				B3EB68D919706B8300587B1A /* PieChart.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

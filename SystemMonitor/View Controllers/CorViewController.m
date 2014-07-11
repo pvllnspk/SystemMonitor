@@ -7,29 +7,19 @@
 //
 
 #import "CorViewController.h"
-#import "BarChart.h"
-
-@interface CorViewController ()
-
-@property (weak, nonatomic) IBOutlet BackgroundGridView *gridView;
-@property (weak, nonatomic) IBOutlet BarChart *chartView;
-
-@end
 
 @implementation CorViewController
 
-- (void)viewDidLoad{
+- (void)initChart{
     
-    [super viewDidLoad];
-    [_gridView setContentMode:UIViewContentModeRedraw];
-    [_chartView setContentMode:UIViewContentModeRedraw];
-    [_chartView setBackgroundColor:[UIColor clearColor]];
+    self.chartView = [[BarChart alloc] initWithFrame:self.view.bounds];
 }
+
 
 - (void) drawChart{
     
-    [_chartView setData:[System getCoresUsage]];
-    [_chartView setNeedsDisplay];
+    [((BarChart*)self.chartView) setData:[System getCoresUsage]];
+    [((BarChart*)self.chartView) setNeedsDisplay];
 }
 
 @end

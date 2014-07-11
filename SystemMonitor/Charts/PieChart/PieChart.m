@@ -7,7 +7,6 @@
 //
 
 #import "PieChart.h"
-#import <QuartzCore/QuartzCore.h>
 
 #define CIRCLE_RADIUS   100
 

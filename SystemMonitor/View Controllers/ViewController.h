@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "BackgroundGridView.h"
+#import "Chart.h"
 #import "System.h"
 #import "Color.h"
 
 @interface ViewController : UIViewController
+
+@property (nonatomic) Chart *chartView;
 
 @end

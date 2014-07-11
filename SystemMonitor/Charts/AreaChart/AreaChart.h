@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Color.h"
+#import "Chart.h"
 
 extern const int STEPS_NUMBER;
 
-@interface AreaChart : UIView
+@interface AreaChart : Chart
 
 @property (nonatomic) NSMutableArray *sendTraffic;
 @property (nonatomic) NSMutableArray *receivedTraffic;

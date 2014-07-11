@@ -8,24 +8,14 @@
 
 #import "NetViewController.h"
 
-@interface NetViewController ()
-
-@property (weak, nonatomic) IBOutlet BackgroundGridView *gridView;
-@property (weak, nonatomic) IBOutlet AreaChart *chartView;
-
-@end
-
 @implementation NetViewController
 {
     int bReceived, bSend;
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    [_gridView setContentMode:UIViewContentModeRedraw];
-    [_chartView setContentMode:UIViewContentModeRedraw];
-    [_chartView setBackgroundColor:[UIColor clearColor]];
+- (void)initChart{
+    
+    self.chartView = [[AreaChart alloc] initWithFrame:self.view.bounds];
 }
 
 - (void) drawChart{
@@ -43,24 +33,24 @@
     bSend = send;
     bReceived = received;
     
-    if([_chartView sendTraffic]){
+    if([((AreaChart*)self.chartView) sendTraffic]){
         
-        if([[_chartView sendTraffic] count] > STEPS_NUMBER){
-            [[_chartView sendTraffic] removeObjectAtIndex:0];
+        if([[((AreaChart*)self.chartView) sendTraffic] count] > STEPS_NUMBER){
+            [[((AreaChart*)self.chartView) sendTraffic] removeObjectAtIndex:0];
         }
-        [[_chartView sendTraffic] addObject:[NSNumber numberWithFloat:(dSend > peek ? 1.0f : dSend / peek)]];
+        [[((AreaChart*)self.chartView) sendTraffic] addObject:[NSNumber numberWithFloat:(dSend > peek ? 1.0f : dSend / peek)]];
         
-        [_chartView setNeedsDisplay];
+        [((AreaChart*)self.chartView) setNeedsDisplay];
     }
     
-    if([_chartView receivedTraffic]){
+    if([((AreaChart*)self.chartView) receivedTraffic]){
         
-        if([[_chartView receivedTraffic] count] > STEPS_NUMBER){
-            [[_chartView receivedTraffic] removeObjectAtIndex:0];
+        if([[((AreaChart*)self.chartView) receivedTraffic] count] > STEPS_NUMBER){
+            [[((AreaChart*)self.chartView) receivedTraffic] removeObjectAtIndex:0];
         }
-        [[_chartView receivedTraffic] addObject:[NSNumber numberWithFloat:(dReceived > peek ? 1.0f : dReceived / peek)]];
+        [[((AreaChart*)self.chartView) receivedTraffic] addObject:[NSNumber numberWithFloat:(dReceived > peek ? 1.0f : dReceived / peek)]];
         
-        [_chartView setNeedsDisplay];
+        [((AreaChart*)self.chartView) setNeedsDisplay];
     }
 }
 

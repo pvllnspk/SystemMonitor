@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <QuartzCore/QuartzCore.h>
-#import "Color.h"
+#import "Chart.h"
 
-@interface BarChart : UIView
+@interface BarChart : Chart
 
 @property (nonatomic) NSArray *data;
 
