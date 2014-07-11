@@ -15,22 +15,6 @@
     NSMutableArray* touchAreas;
 }
 
-- (void) drawBarChart:(CGRect)rect withContext: (CGContextRef) context andColor:(UIColor*)color{
-    
-    CGContextBeginPath(context);
-    
-    [color setFill];
-    
-    CGContextMoveToPoint(context, CGRectGetMinX(rect), CGRectGetMinY(rect));
-    CGContextAddLineToPoint(context, CGRectGetMaxX(rect), CGRectGetMinY(rect));
-    CGContextAddLineToPoint(context, CGRectGetMaxX(rect), CGRectGetMaxY(rect));
-    CGContextAddLineToPoint(context, CGRectGetMinX(rect), CGRectGetMaxY(rect));
-    
-    CGContextClosePath(context);
-    CGContextFillPath(context);
-}
-
-
 - (void)drawRect:(CGRect)rect{
     
     if(touchAreas == nil){
@@ -41,10 +25,10 @@
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     
-    float maxBarHeight =rect.size.height * 0.7;
+    float maxBarHeight =rect.size.height * 0.6;
     float xPadding = (rect.size.width - xBarWidth * [_data count])/ ([_data count] + 3);
     float xOffset = (rect.size.width - (xPadding * ([_data count] - 1) + xBarWidth * [_data count])) / 2;
-    float yOffset = (rect.size.height - maxBarHeight) / 2;
+    float yOffset = (rect.size.height - maxBarHeight) / 2 + 25;
     
     float data[[_data count]];
     for(int j=0;j<sizeof(data)/sizeof(float);j++){
@@ -58,7 +42,7 @@
         float barHeight = maxBarHeight * data[i];
         
         CGRect barRect = CGRectMake(barX, barY, xBarWidth, barHeight);
-        [self drawBarChart:barRect withContext:context andColor:[UIColor colorWithWhite:0.97 alpha:1]];
+        [self drawRect:barRect withContext:context andColor:[UIColor colorWithWhite:0.95 alpha:1.0]];
         
         [touchAreas addObject:[NSValue valueWithCGRect:barRect]];
         
@@ -67,7 +51,7 @@
         barHeight = maxBarHeight * [[_data objectAtIndex:i] floatValue];
         
         barRect = CGRectMake(barX, barY, xBarWidth, barHeight);
-        [self drawBarChart:barRect withContext:context andColor:[UIColor colorWithRed:106.0/255 green:175.0/255 blue:232.0/255 alpha:1]];
+        [self drawRect:barRect withContext:context andColor:[UIColor colorWithRed:106.0/255 green:175.0/255 blue:232.0/255 alpha:1]];
     }
     
     //    CGContextSetTextMatrix(context, CGAffineTransformRotate(CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0), M_PI / 2));

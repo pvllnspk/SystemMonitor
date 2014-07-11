@@ -10,7 +10,7 @@
 #define SystemMonitor_Color_h
 
 #define LightBlue     [[[UIColor blueColor] colorWithAlphaComponent:0.3] CGColor]
-#define LightGreen    [[[UIColor greenColor] colorWithAlphaComponent:0.3] CGColor]
+#define LightGreen    [[UIColor colorWithRed:0.267 green:0.639 blue:0.251 alpha:1] CGColor]
 #define LightYellow   [[[UIColor yellowColor] colorWithAlphaComponent:0.3] CGColor]
 #define LightRed      [[[UIColor redColor] colorWithAlphaComponent:0.3] CGColor]
 #define LightGrey     [[UIColor lightGrayColor] CGColor]

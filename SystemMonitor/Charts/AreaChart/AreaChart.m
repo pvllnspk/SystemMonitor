@@ -14,6 +14,9 @@
 #define DRAW_CIRCLES    NO
 #define FILL_CHART      YES
 
+#define COLOR_REC_TR      [UIColor colorWithRed:0.267 green:0.639 blue:0.251 alpha:1]
+#define COLOR_SEND_TR     [UIColor colorWithRed:1.0 green:0.5 blue:0 alpha:1.0]
+
 int const STEPS_NUMBER = 15;
 
 @implementation AreaChart
@@ -22,8 +25,8 @@ int const STEPS_NUMBER = 15;
 -(id)initWithFrame:(CGRect)frame{
     if([super initWithFrame:frame]){
         
-         _sendTraffic = [NSMutableArray array];
-        _receivedTraffic = [NSMutableArray array];
+         _sendTrafficBunch = [NSMutableArray array];
+        _receivedTrafficBunch = [NSMutableArray array];
     }
     return self;
 }
@@ -38,7 +41,7 @@ int const STEPS_NUMBER = 15;
     CGContextSetLineWidth(context, 2.0);
     CGContextSetStrokeColorWithColor(context, lineColor);
     
-    float maxChartHeight =rect.size.height * 0.7;
+    float maxChartHeight =rect.size.height * 0.5;
     float yPadding = (rect.size.height - maxChartHeight) / 2;
     
     
@@ -113,17 +116,41 @@ int const STEPS_NUMBER = 15;
     }
 }
 
+
+- (void) drawValues:(CGRect)rect withContext: (CGContextRef) context{
+    
+    CGContextSetTextMatrix (context, CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0));
+    CGContextSelectFont(context, "Helvetica", 16, kCGEncodingMacRoman);
+    
+    float barX = rect.size.width - 215, barY = 10, barW = 20, barH = 20;
+    
+    CGRect barRect = CGRectMake(barX, barY, barW, barH);
+    [self drawRect:barRect withContext:context andColor:COLOR_REC_TR];
+    CGContextSetFillColorWithColor(context, [COLOR_REC_TR CGColor]);
+    NSString *value = [NSString stringWithFormat:@"Data received: %@",[NSByteCountFormatter stringFromByteCount: _receivedTrafficTotal countStyle:NSByteCountFormatterCountStyleFile]];
+    CGContextShowTextAtPoint(context, barX + barW + 5, barY + barH - 5, [value UTF8String], [value length]);
+    
+    barRect = CGRectMake(barX, 35, 20, 20);
+    [self drawRect:barRect withContext:context andColor:COLOR_SEND_TR];
+    CGContextSetFillColorWithColor(context, [COLOR_SEND_TR CGColor]);
+    value = [NSString stringWithFormat:@"Data sent: %@",[NSByteCountFormatter stringFromByteCount: _sendTrafficTotal countStyle:NSByteCountFormatterCountStyleFile]];
+    CGContextShowTextAtPoint(context, barX + barW + 5, barY + 2 * barH, [value UTF8String], [value length]);
+}
+
+
 - (void)drawRect:(CGRect)rect{
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextClearRect(context, rect);
     
-    if([_sendTraffic count] > 0){
-        [self drawLineChart:rect withContext:context withData:_sendTraffic withColor:[UIColor colorWithRed:1.0 green:0.5 blue:0 alpha:1.0]];
+    if([_sendTrafficBunch count] > 0){
+        [self drawLineChart:rect withContext:context withData:_sendTrafficBunch withColor:COLOR_SEND_TR];
     }
-    if([_receivedTraffic count] > 0){
-        [self drawLineChart:rect withContext:context withData:_receivedTraffic withColor:[[UIColor greenColor] colorWithAlphaComponent:1.0]];
+    if([_receivedTrafficBunch count] > 0){
+        [self drawLineChart:rect withContext:context withData:_receivedTrafficBunch withColor:COLOR_REC_TR];
     }
+    
+    [self drawValues:rect withContext:context];
 }
 
 

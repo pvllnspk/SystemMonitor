@@ -10,22 +10,18 @@
 
 @implementation Chart
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
+- (void) drawRect:(CGRect)rect withContext: (CGContextRef) context andColor:(UIColor*)color{
+    
+    CGContextBeginPath(context);
+    [color setFill];
+    
+    CGContextMoveToPoint(context, CGRectGetMinX(rect), CGRectGetMinY(rect));
+    CGContextAddLineToPoint(context, CGRectGetMaxX(rect), CGRectGetMinY(rect));
+    CGContextAddLineToPoint(context, CGRectGetMaxX(rect), CGRectGetMaxY(rect));
+    CGContextAddLineToPoint(context, CGRectGetMinX(rect), CGRectGetMaxY(rect));
+    
+    CGContextClosePath(context);
+    CGContextFillPath(context);
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end

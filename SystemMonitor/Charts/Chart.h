@@ -15,4 +15,6 @@
 
 @property (nonatomic, retain) id<ChartDelegate> delegate;
 
+- (void) drawRect:(CGRect)rect withContext: (CGContextRef) context andColor:(UIColor*)color;
+
 @end

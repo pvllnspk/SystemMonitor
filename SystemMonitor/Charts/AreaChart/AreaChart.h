@@ -13,7 +13,9 @@ extern const int STEPS_NUMBER;
 
 @interface AreaChart : Chart
 
-@property (nonatomic) NSMutableArray *sendTraffic;
-@property (nonatomic) NSMutableArray *receivedTraffic;
+@property (nonatomic) NSMutableArray *sendTrafficBunch;
+@property (nonatomic) NSMutableArray *receivedTrafficBunch;
+@property (nonatomic) int sendTrafficTotal;
+@property (nonatomic) int receivedTrafficTotal;
 
 @end
