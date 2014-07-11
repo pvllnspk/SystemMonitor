@@ -15,11 +15,11 @@
     NSMutableArray* touchAreas;
 }
 
-- (void) drawBarChart:(CGRect)rect withContext: (CGContextRef) context{
+- (void) drawBarChart:(CGRect)rect withContext: (CGContextRef) context andColor:(UIColor*)color{
     
     CGContextBeginPath(context);
     
-    CGContextSetGrayFillColor(context, 0.2, 0.5);
+    [color setFill];
     
     CGContextMoveToPoint(context, CGRectGetMinX(rect), CGRectGetMinY(rect));
     CGContextAddLineToPoint(context, CGRectGetMaxX(rect), CGRectGetMinY(rect));
@@ -58,7 +58,7 @@
         float barHeight = maxBarHeight * data[i];
         
         CGRect barRect = CGRectMake(barX, barY, xBarWidth, barHeight);
-        [self drawBarChart:barRect withContext:context];
+        [self drawBarChart:barRect withContext:context andColor:[UIColor colorWithWhite:0.97 alpha:1]];
         
         [touchAreas addObject:[NSValue valueWithCGRect:barRect]];
         
@@ -67,7 +67,7 @@
         barHeight = maxBarHeight * [[_data objectAtIndex:i] floatValue];
         
         barRect = CGRectMake(barX, barY, xBarWidth, barHeight);
-        [self drawBarChart:barRect withContext:context];
+        [self drawBarChart:barRect withContext:context andColor:[UIColor colorWithRed:106.0/255 green:175.0/255 blue:232.0/255 alpha:1]];
     }
     
     //    CGContextSetTextMatrix(context, CGAffineTransformRotate(CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0), M_PI / 2));
@@ -95,7 +95,9 @@
     for (int i = 0; i < [touchAreas count]; i++){
         if (CGRectContainsPoint([[touchAreas objectAtIndex:i] CGRectValue], point)){
             
-            NSLog(@"Tapped a bar with index %d", i);
+            if ([self.delegate respondsToSelector:@selector(userClickedOnBarCharIndex:)]) {
+                [self.delegate userClickedOnBarCharIndex:i];
+            }
             break;
         }
     }

@@ -10,13 +10,14 @@
 
 @implementation ViewController
 {
+    BackgroundGridView *gridView;
     NSTimer *timer;
 }
 
 - (void)viewDidLoad{
     [super viewDidLoad];
     
-    BackgroundGridView *gridView = [[BackgroundGridView alloc] initWithFrame:self.view.bounds];
+    gridView = [[BackgroundGridView alloc] initWithFrame:self.view.bounds];
     [gridView setContentMode:UIViewContentModeRedraw];
     [gridView setBackgroundColor:[UIColor clearColor]];
     [self.view addSubview:gridView];
@@ -24,13 +25,16 @@
     [self performSelector:@selector(initChart) withObject: nil];
     [_chartView setContentMode:UIViewContentModeRedraw];
     [_chartView setBackgroundColor:[UIColor clearColor]];
+    _chartView.delegate = self;
     [self.view addSubview:_chartView];
 }
 
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
     
+    gridView.frame = self.view.bounds;
     _chartView.frame = self.view.bounds;
+    [gridView setNeedsDisplay];
     [_chartView setNeedsDisplay];
 }
 

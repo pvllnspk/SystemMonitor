@@ -11,8 +11,9 @@
 #import "Chart.h"
 #import "System.h"
 #import "Color.h"
+#import "ChartDelegate.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <ChartDelegate>
 
 @property (nonatomic) Chart *chartView;
 

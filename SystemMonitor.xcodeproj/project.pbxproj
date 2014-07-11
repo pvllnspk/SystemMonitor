@@ -74,6 +74,7 @@
 		B3EB68DE19706CF500587B1A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B3EB68DF19706CF500587B1A /* pie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pie.png; sourceTree = "<group>"; };
 		B3EB68E019706CF500587B1A /* stats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stats.png; sourceTree = "<group>"; };
+		B3EB68E7197073C400587B1A /* ChartDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChartDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +171,7 @@
 			children = (
 				B3EB68CB19706B7400587B1A /* Chart.h */,
 				B3EB68CC19706B7400587B1A /* Chart.m */,
+				B3EB68E7197073C400587B1A /* ChartDelegate.h */,
 				B3EB68CE19706B8300587B1A /* AreaChart */,
 				B3EB68D119706B8300587B1A /* BarChart */,
 				B3EB68D419706B8300587B1A /* PieChart */,

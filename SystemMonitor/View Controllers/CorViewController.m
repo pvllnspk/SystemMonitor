@@ -22,4 +22,10 @@
     [((BarChart*)self.chartView) setNeedsDisplay];
 }
 
+
+- (void)userClickedOnBarCharIndex:(int)barIndex{
+    
+    NSLog(@"Tapped a bar with index %d", barIndex);
+}
+
 @end
