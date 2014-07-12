@@ -49,7 +49,6 @@
 		B39EA9C2196805CC009B3281 /* CorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CorViewController.m; path = "View Controllers/CorViewController.m"; sourceTree = "<group>"; };
 		B39EA9CB19686818009B3281 /* NetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetViewController.h; path = "View Controllers/NetViewController.h"; sourceTree = "<group>"; };
 		B39EA9CC19686818009B3281 /* NetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetViewController.m; path = "View Controllers/NetViewController.m"; sourceTree = "<group>"; };
-		B3E08A421969BE910084AC3C /* version.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		B3E38301196F06B200F94DE7 /* BackgroundGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundGridView.h; sourceTree = "<group>"; };
 		B3E38302196F06B200F94DE7 /* BackgroundGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundGridView.m; sourceTree = "<group>"; };
 		B3E3830D196F0EA500F94DE7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -127,7 +126,6 @@
 				B39EA9A0196804E1009B3281 /* MainStoryboard.storyboard */,
 				B3E472D1196DCD5C00568576 /* System.h */,
 				B3E472D2196DCD5D00568576 /* System.m */,
-				B3E08A421969BE910084AC3C /* version.h */,
 				B3E38301196F06B200F94DE7 /* BackgroundGridView.h */,
 				B3E38302196F06B200F94DE7 /* BackgroundGridView.m */,
 				B39EA9BE1968054D009B3281 /* View Controllers */,

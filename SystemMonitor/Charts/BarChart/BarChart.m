@@ -28,7 +28,7 @@
     float maxBarHeight =rect.size.height * 0.7;
     float xPadding = (rect.size.width - xBarWidth * [_data count])/ ([_data count] + 3);
     float xOffset = (rect.size.width - (xPadding * ([_data count] - 1) + xBarWidth * [_data count])) / 2;
-    float yOffset = (rect.size.height - maxBarHeight) / 2 + 25;
+    float yOffset = (rect.size.height - maxBarHeight) / 2 + 15;
     
     float data[[_data count]];
     for(int j=0;j<sizeof(data)/sizeof(float);j++){

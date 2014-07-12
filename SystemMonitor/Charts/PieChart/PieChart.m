@@ -35,7 +35,7 @@
         }
         CGFloat endAngle = endValue * 2 * M_PI - M_PI/2;
         
-        CGContextSetFillColorWithColor(context,[[[_colorsArray objectAtIndex:i] colorWithAlphaComponent:0.5] CGColor]);
+        CGContextSetFillColorWithColor(context,[[[_colorsArray objectAtIndex:i] colorWithAlphaComponent:0.6] CGColor]);
         CGContextBeginPath(context);
         CGContextMoveToPoint(context, circleCenter.x, circleCenter.y);
         CGContextAddArc(context, circleCenter.x, circleCenter.y, CIRCLE_RADIUS, startAngle, endAngle, 0);
