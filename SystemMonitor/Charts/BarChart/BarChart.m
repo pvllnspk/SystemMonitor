@@ -25,7 +25,7 @@
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     
-    float maxBarHeight =rect.size.height * 0.6;
+    float maxBarHeight =rect.size.height * 0.7;
     float xPadding = (rect.size.width - xBarWidth * [_data count])/ ([_data count] + 3);
     float xOffset = (rect.size.width - (xPadding * ([_data count] - 1) + xBarWidth * [_data count])) / 2;
     float yOffset = (rect.size.height - maxBarHeight) / 2 + 25;
@@ -58,7 +58,7 @@
     CGContextSetTextMatrix (context, CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0));
     CGContextSelectFont(context, "Helvetica", 16, kCGEncodingMacRoman);
     CGContextSetTextDrawingMode(context, kCGTextFill);
-    CGContextSetFillColorWithColor(context, LightGrey);
+    CGContextSetFillColorWithColor(context, [[UIColor lightGrayColor] CGColor]);
     
     for (int i = 0; i < [_data count]; i++){
         

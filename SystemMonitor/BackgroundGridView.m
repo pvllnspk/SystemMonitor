@@ -7,7 +7,6 @@
 //
 
 #import "BackgroundGridView.h"
-#import "Color.h"
 
 #define xyGridStep  40
 
@@ -16,7 +15,7 @@
 - (void) drawBackgroundGrid:(CGRect)rect withContext: (CGContextRef) context{
     
     CGContextSetLineWidth(context, 0.2);
-    CGContextSetStrokeColorWithColor(context, (CGColorRef)(LightGrey));
+    CGContextSetStrokeColorWithColor(context,[[UIColor lightGrayColor] CGColor]);
     CGFloat dash[] = {2.0, 2.0};
     CGContextSetLineDash(context, 0.0, dash, 2);
     

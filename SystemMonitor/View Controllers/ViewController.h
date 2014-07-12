@@ -10,7 +10,6 @@
 #import "BackgroundGridView.h"
 #import "Chart.h"
 #import "System.h"
-#import "Color.h"
 #import "ChartDelegate.h"
 
 @interface ViewController : UIViewController <ChartDelegate>

@@ -11,7 +11,8 @@
 
 @interface PieChart : Chart
 
-@property (nonatomic, retain) NSArray *sliceArray;
+@property (nonatomic, retain) NSArray *valuesArray;
+@property (nonatomic, retain) NSArray *slicesArray;
 @property (nonatomic, retain) NSArray *colorsArray;
 
 @end

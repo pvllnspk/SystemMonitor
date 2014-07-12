@@ -55,7 +55,6 @@
 		B3E3830D196F0EA500F94DE7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B3E38315196F20AC00F94DE7 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = "View Controllers/ViewController.h"; sourceTree = "<group>"; };
 		B3E38316196F20AC00F94DE7 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = "View Controllers/ViewController.m"; sourceTree = "<group>"; };
-		B3E38329196F473D00F94DE7 /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
 		B3E472D1196DCD5C00568576 /* System.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = System.h; sourceTree = "<group>"; };
 		B3E472D2196DCD5D00568576 /* System.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = System.m; sourceTree = "<group>"; };
 		B3E472D4196DDA7700568576 /* MemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MemViewController.h; path = "View Controllers/MemViewController.h"; sourceTree = "<group>"; };
@@ -123,7 +122,6 @@
 		B39EA98E196804E0009B3281 /* SystemMonitor */ = {
 			isa = PBXGroup;
 			children = (
-				B3E38329196F473D00F94DE7 /* Color.h */,
 				B39EA997196804E0009B3281 /* AppDelegate.h */,
 				B39EA998196804E0009B3281 /* AppDelegate.m */,
 				B39EA9A0196804E1009B3281 /* MainStoryboard.storyboard */,

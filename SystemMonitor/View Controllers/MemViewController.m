@@ -18,16 +18,18 @@
 
 - (void) drawChart{
     
-    ((PieChart*)self.chartView).sliceArray = [NSArray arrayWithObjects:[NSNumber numberWithFloat:[System activeMemory]/[System totalMemory]],
+    ((PieChart*)self.chartView).valuesArray = [NSArray arrayWithObjects:@"Active", @"Inactive", @"Free", @"Wired", nil];
+    
+    ((PieChart*)self.chartView).slicesArray = [NSArray arrayWithObjects:[NSNumber numberWithFloat:[System activeMemory]/[System totalMemory]],
                              [NSNumber numberWithFloat:[System inactiveMemory]/[System totalMemory]],
                              [NSNumber numberWithFloat:[System freeMemory]/[System totalMemory]],
-                             [NSNumber numberWithFloat:[System wiredMemory]/[System totalMemory]],
-                             nil];
+                             [NSNumber numberWithFloat:[System wiredMemory]/[System totalMemory]], nil];
     
-    ((PieChart*)self.chartView).colorsArray = [NSArray arrayWithObjects:(id)LightYellow,
-                              (id)LightBlue,
-                              (id)LightGreen,
-                              (id)LightRed, nil];
+    ((PieChart*)self.chartView).colorsArray = [NSArray arrayWithObjects:
+                              [UIColor colorWithRed:244/255.0f green:245/255.0f blue:28/255.0f alpha:1.f],
+                              [UIColor colorWithRed:14/255.0f green:113/255.0f blue:219/255.0f alpha:1.0f],
+                              [UIColor colorWithRed:14/255.0f green:223/255.0f blue:47/255.0f alpha:1.0f],
+                              [UIColor colorWithRed:244/255.0f green:114/255.0f blue:67/255.0f alpha:1.0f], nil];
     
     [self.chartView setNeedsDisplay];
 }
