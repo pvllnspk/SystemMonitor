@@ -20,7 +20,7 @@
 
 - (void) drawChart{
     
-    const float peek = 5 * 1024;
+    const float peek = 10 * 1024;
     
     NSArray * networkTraffic = [System getNetworkTraffic];
     
@@ -33,28 +33,23 @@
     bSend = send;
     bReceived = received;
     
-    [((AreaChart*)self.chartView) setSendTrafficTotal:send];
-    [((AreaChart*)self.chartView) setReceivedTrafficTotal:received];
+    AreaChart *chart = ((AreaChart*)self.chartView);
     
-    if([((AreaChart*)self.chartView) sendTrafficBunch]){
-        
-        if([[((AreaChart*)self.chartView) sendTrafficBunch] count] > STEPS_NUMBER){
-            [[((AreaChart*)self.chartView) sendTrafficBunch] removeObjectAtIndex:0];
-        }
-        [[((AreaChart*)self.chartView) sendTrafficBunch] addObject:[NSNumber numberWithFloat:(dSend > peek ? 1.0f : dSend / peek)]];
-        
-        [((AreaChart*)self.chartView) setNeedsDisplay];
-    }
+    [chart setSendTrafficTotal:send];
+    [chart setReceivedTrafficTotal:received];
     
-    if([((AreaChart*)self.chartView) receivedTrafficBunch]){
-        
-        if([[((AreaChart*)self.chartView) receivedTrafficBunch] count] > STEPS_NUMBER){
-            [[((AreaChart*)self.chartView) receivedTrafficBunch] removeObjectAtIndex:0];
-        }
-        [[((AreaChart*)self.chartView) receivedTrafficBunch] addObject:[NSNumber numberWithFloat:(dReceived > peek ? 1.0f : dReceived / peek)]];
-        
-        [((AreaChart*)self.chartView) setNeedsDisplay];
+    if([[chart sendTrafficBunch] count] > STEPS_NUMBER){
+        [[chart sendTrafficBunch] removeObjectAtIndex:0];
     }
+    [[chart sendTrafficBunch] addObject:[NSNumber numberWithFloat:(dSend > peek ? 1.0f : dSend / peek)]];
+    
+    
+    if([[chart receivedTrafficBunch] count] > STEPS_NUMBER){
+        [[chart receivedTrafficBunch] removeObjectAtIndex:0];
+    }
+    [[chart receivedTrafficBunch] addObject:[NSNumber numberWithFloat:(dReceived > peek ? 1.0f : dReceived / peek)]];
+    
+    [chart setNeedsDisplay];
 }
 
 @end
